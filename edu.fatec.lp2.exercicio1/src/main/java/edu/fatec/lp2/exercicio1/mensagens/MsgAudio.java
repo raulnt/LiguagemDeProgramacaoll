@@ -5,8 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class MsgAudio extends Mensagem {
@@ -14,5 +13,10 @@ public class MsgAudio extends Mensagem {
     @Override
     public MsgAudio sendMensagem(String conteudo){
         return new MsgAudio();
+    }
+
+    @Override
+    public String toString(){
+        return "MsgAudio"
     }
 }

@@ -2,18 +2,22 @@ package edu.fatec.lp2.exercicio2;
 
 import lombok.*;
 
-@Getter
-@Setter
+@Data
 @ToString
 public class Produto {
     private String nome;
     private String unidade;
     private String descricao;
-    private Double preco;
-    private Double descontoMaximo;
+    private double preco;
+    private double descontoMaximo;
     private Supermercado supermercado;
 
-    public Produto(Supermercado s){
-        this.supermercado = s;
+    public Produto(Supermercado supermercado){
+        this.supermercado = supermercado;
+    }
+
+    @Override
+    public String toString(){
+        return nome;
     }
 }

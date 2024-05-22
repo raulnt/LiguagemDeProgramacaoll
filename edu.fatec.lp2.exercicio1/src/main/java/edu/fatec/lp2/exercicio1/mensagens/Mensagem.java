@@ -1,17 +1,15 @@
-package edu.fatec.lp2.exercicio1.mensagens;
+package edu.fatec.lp2.exercicio1;
 
-import edu.fatec.lp2.exercicio1.Contatinho;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
-@Getter
-@Setter
-@ToString
+@Data
 public abstract class Mensagem {
     private Contatinho destinatario;
     private String horaEnvio;
     private String conteudo;
 
-    abstract Mensagem sendMensagem(String conteudo);
+    public abstract Mensagem sendMessage(String conteudo);
+
+    @Override
+    public abstract String toString();
 }

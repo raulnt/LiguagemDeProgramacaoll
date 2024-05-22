@@ -5,8 +5,7 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Getter
-@Setter
+@Data
 public class ListaCompra implements Calculavel{
     private List<ItemCompra> itensCompras;
     private Integer qtdeMax;
@@ -17,7 +16,7 @@ public class ListaCompra implements Calculavel{
 
     public void incluir(ItemCompra item){
         if(itensCompras.size() == qtdeMax){
-            System.out.println("Não é possivel mais adicionar itens.");
+            System.out.println("Lista de intens cheia.");
         }else{
             itensCompras.add(item);
         }
@@ -31,7 +30,4 @@ public class ListaCompra implements Calculavel{
         }
         return valorTotal;
     }
-
-
-
 }

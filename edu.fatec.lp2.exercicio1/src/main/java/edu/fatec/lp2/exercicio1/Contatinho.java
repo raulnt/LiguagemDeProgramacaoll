@@ -1,10 +1,8 @@
 package edu.fatec.lp2.exercicio1;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class Contatinho {
     private String nome;
     private String celular;

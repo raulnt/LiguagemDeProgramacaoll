@@ -5,8 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class MsgFoto extends Mensagem {
@@ -14,5 +13,10 @@ public class MsgFoto extends Mensagem {
     @Override
     public MsgFoto sendMensagem(String conteudo) {
         return new MsgFoto();
+    }
+
+    @Override
+    public String toString(){
+        return "MsgFoto"
     }
 }

@@ -3,15 +3,14 @@ package edu.fatec.lp2.exercicio2;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 public class ItemCompra implements Calculavel{
-    private Integer quantidade;
+    private int quantidade;
     private Produto produto;
-    private Double desconto;
-    public ItemCompra(Produto produto, Double desconto){
+    private double desconto;
+    public ItemCompra(Produto produto, double desconto){
         this.produto = produto;
-        this.desconto = desconto;
+        setDesconto(desconto)
     }
 
     @Override

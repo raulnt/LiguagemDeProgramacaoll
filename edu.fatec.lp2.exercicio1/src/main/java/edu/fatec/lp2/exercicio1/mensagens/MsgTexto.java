@@ -5,8 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class MsgTexto extends Mensagem {
@@ -15,5 +14,10 @@ public class MsgTexto extends Mensagem {
     @Override
     public MsgTexto sendMensagem(String conteudo) {
         return new MsgTexto();
+    }
+
+    @Override
+    public String toString() {
+        return "MsgTexto"
     }
 }

@@ -6,8 +6,7 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Getter
-@Setter
+@Data
 public class Whatsapp {
     private List<Contatinho> contatos;
     private List<Mensagem> mensagens;
